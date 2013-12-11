@@ -18,7 +18,7 @@
 extern "C" {
 #include <pcap.h>
 }
-#include <JavaVM/jni.h>
+#include <jni.h>
 #include "process.hpp"
 
 
@@ -675,8 +675,7 @@ Java_net_sourceforge_jpcap_capture_PacketCapture_lookupDevices
     ifrSize = sizeof(struct ifreq);
 #endif /* HAVE_SA_LEN */
 
-  char *s;
-  for(;ifr < last; (char*)ifr += ifrSize, ifr=(struct ifreq *)s) {
+  for(;ifr < last; (char*)(ifr += ifrSize)) {
     /* Skip "dummy" and "alaias" interface */
     /*
     if(strncmp(ifr->ifr_name,"dummy",5)==0 || 

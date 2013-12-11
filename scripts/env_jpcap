@@ -14,13 +14,13 @@
 #
 
 # change to the location in your workspace where jpcap is checked out..
-export PROJECT_HOME=~/dev/github/jpcap
+export PROJECT_HOME=~/Projects/Muzee/jpcap
 
 # NOTE: Windows users, with MinGW, '~/' doesn't work in CLASSPATH. Instead:
 #export PROJECT_HOME=/home/$USERNAME/dev/sourceforge/jpcap
 
 # change to point to the location where built distributions will be placed..
-export RELEASE_HOME=~/dev/releases
+export RELEASE_HOME=~/Projects/Muzee/jpcap/releases
 
 # NOTE: Windows users must specify path to WinPcap.
 #export WINPCAP_HOME=/c/WpdPack
